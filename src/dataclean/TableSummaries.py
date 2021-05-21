@@ -24,7 +24,7 @@ def shapiro_columns(df, progress = False):
         count = count + 1
         shapiro_out.append([stat,p])
 
-    shapiro_out_df = pd.DataFrame(shapiro_out, columns=["stat", "p"], dtype=np.float64)
+    shapiro_out_df = pd.DataFrame(shapiro_out, columns=["shapiro_stat", "shapiro_p"], dtype=np.float64)
     if (progress):
         print("done shapiro, shape")
         print(shapiro_out_df.shape)
